@@ -1,13 +1,13 @@
 [package]
-name = "h3-quinn"
+name = "netget-h3-quinn"
 version = "0.0.10"
 rust-version = "1.70"
 authors = ["Jean-Christophe BEGUE <jc.begue@pm.me>"]
 edition = "2021"
 documentation = "https://docs.rs/h3-quinn"
-repository = "https://github.com/hyperium/h3"
+repository = "https://github.com/netget-net/h3"
 readme = "README.md"
-description = "QUIC transport implementation based on Quinn."
+description = "NetGet fork of h3-quinn: cancellation-safe RecvStream (no panic in stop_sending). QUIC transport implementation based on Quinn."
 keywords = ["http3", "quic", "h3"]
 categories = ["network-programming", "web-programming"]
 license = "MIT"
@@ -27,3 +27,6 @@ tracing = { version = "0.1.40", optional = true }
 [features]
 tracing = ["dep:tracing"]
 datagram = ["dep:h3-datagram"]
+
+[lib]
+name = "h3_quinn"
